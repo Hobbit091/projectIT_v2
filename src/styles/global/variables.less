@@ -33,3 +33,17 @@
 @font2: "Lora", serif;
 @font3: "mak-bold", serif;
 @font4: "mak-light", serif;
+
+
+:root {
+  --bg: @white;
+  --color: @black;
+}
+:root.theme-dark {
+  --bg: @black;
+  --color: @white;
+}
+body {
+  background-color: var(--bg);
+  color: var(--color);
+}
