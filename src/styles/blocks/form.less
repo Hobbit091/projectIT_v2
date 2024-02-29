@@ -54,6 +54,14 @@
   &__btn{
     max-width: 400px;
     width: 100%;
+
+    &:hover {
+      background-color: @black;
+      color: @white;
+      @media @bw1020 {
+        background-color: transparent;
+      }
+      }
     
     &-close{
       box-sizing: border-box;
@@ -87,6 +95,13 @@
     &--mb40{
       margin-bottom: 40px;
     }
+  }
+
+
+  label.error,
+  span.error {
+    display: block;
+    margin: 5px 0 0;
   }
 
 }
