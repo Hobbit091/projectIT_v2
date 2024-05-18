@@ -44,9 +44,53 @@
         width: 272px;
         padding: 15px 40px;
         font-family: @font1;
+        &:hover {
+            background-color: @black;
+            color: @white;
+            @media @bw1020 {
+              background-color: transparent;
+            }
+        }
+
+        &:active {
+            background-color: @black;
+            color: @white;
+            @media @bw1020 {
+              background-color: transparent;
+            }
+        }
 
         @media @bw370{
             font-size: 14px;
           }
+        
+        &--red{
+            box-sizing: border-box;
+            text-decoration: none;
+            background-color: @red;
+            padding: 15px 40px;
+            border: 0px;
+            font-size: 16px;
+            font-family: @font1;
+            line-height: normal;
+            font-weight: 600;
+            color: @white;
+
+            &:hover {
+                background-color:@red_dark ;
+                color: @white;
+            }
+    
+            &:active {
+                background-color: @red_dark;
+                color: @white;
+            }
+
+            @media @bw370{
+                font-size: 14px;
+              }
+        }
+
+     
     }
 }

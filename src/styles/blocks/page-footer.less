@@ -1,9 +1,16 @@
 .page-footer{
     box-sizing: border-box;
     padding: 60px 0 75px;
+    padding-bottom: 75px;
     &__container{
         .container;
     }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
     &__border{
         display: flex;
         margin-bottom: 60px;
@@ -22,9 +29,10 @@
             background: linear-gradient(90deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00) 100%);
         }
     }
-    &__wrapper{
+    &__start-panel{
         display: flex;
         justify-content: space-between;
+        margin-bottom: 60px;
 
         @media @bw370{
             display: flex;
@@ -77,5 +85,59 @@
         @media @bw768{
             font-size: 16px;
         }
+    }
+
+    &__end-panel{
+        display: grid; 
+        grid-template-columns: 1fr 160px 1fr; 
+        grid-template-rows: 0.5fr 0.5fr; 
+        gap: 20px 203px;
+        grid-template-areas: 
+        "millenials icons ."
+        "cookies_politica icons tagree"; 
+
+        &__millenials{
+            grid-area: millenials;
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px
+        }
+
+        &__cookies_politica{
+            grid-area: cookies_politica;
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        &__icons{
+            grid-area: icons;  
+            display: flex;
+            justify-content: space-between; 
+            
+            &--vk{
+                max-width: 58px;
+                max-height: 58px;
+            }
+
+            &--insta{
+                max-width: 58px;
+                max-height: 58px;
+            }
+        }
+
+        &__tagree{
+            grid-area: tagree;
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            max-height: 70px;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            
+        }
+
+        
     }
 }
